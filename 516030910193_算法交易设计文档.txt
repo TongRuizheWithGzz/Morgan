@@ -1,0 +1,39 @@
+1.SORT
+
+使用struct：
+Quote表示一个quote
+Order表示一个order
+level1Book表示一个level1Book
+
+OrderBook类：
+成员变量orderBook: 记录当前的order
+outputInfo:输出被fill的order
+addOrder:为orderBook中添加一个order
+fillOrder:用一个quote来填充order
+
+Sort类：
+readQuote方法：从输入流读取一个order
+updataLevel1Book: 用一个quote更新level1Book
+readOrder: 读取一个order
+splitOrder:将一个order按照level1Book进行分裂
+dealWithQuote:处理最新读入的quote
+
+
+SORT 算法的主要流程：
+1.从Orders.csv中读取所有order
+2.从console读取用户手动输入的order
+3.从Quotes.csv中读取所有quote，同时完成各项任务
+4.输出结果
+
+
+
+
+2.iceberg:
+Iceberg类：
+内嵌类：singleOrder类：表示一个大订单被split之后的单个小订单
+setQuantity:设置所需要split的订单的大小
+output_distribute:输出split之后的分布
+
+主要流程：
+根据历史的成交金额进行加权平均
+
